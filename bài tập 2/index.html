@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sinh viên - OOP with PHP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <h1>OOP with PHP</h1>
+
+        <label class="view-label" for="chon">Danh mục</label>
+        <select id="chon" name="chon">
+            <option value="sinhvien" selected>Sinh viên</option>
+        </select>
+
+        <section id="info" class="student-list" aria-live="polite">
+            <p>Đang tải danh sách sinh viên...</p>
+        </section>
+    </main>
+    <script>
+        function loadTable() {
+            const select = document.getElementById('chon');
+            const output = document.getElementById('info');
+            const request = new XMLHttpRequest();
+
+            request.onreadystatechange = function () {
+                if (request.readyState === XMLHttpRequest.DONE) {
+                    if (request.status === 200) {
+                        output.innerHTML = request.responseText;
+                    } else {
+                        output.textContent = 'Không thể tải danh sách sinh viên. Vui lòng thử lại.';
+                    }
+                }
+            };
+
+            request.open('GET', 'showTable.php?chon=' + encodeURIComponent(select.value), true);
+            request.send();
+        }
+
+        document.getElementById('chon').addEventListener('change', loadTable);
+        loadTable();
+    </script>
+</body>
+</html>

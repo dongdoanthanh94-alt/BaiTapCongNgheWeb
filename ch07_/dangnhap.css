@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  width: 380px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+}
+
+input[type="submit"] {
+  padding: 8px 16px;
+  cursor: pointer;
+}

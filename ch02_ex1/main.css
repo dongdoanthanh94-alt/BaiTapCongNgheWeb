@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: 0;
+}
+main {
+  width: 450px;
+  margin: 0 auto;
+  padding: 1em;
+  background: white;
+  border: 2px solid navy;
+  margin-top: 2em;
+  border-radius: 5px;
+}
+h1 {
+  color: navy;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.3em;
+}
+div#data input {
+  float: right;
+  width: 15em;
+  margin-bottom: 0.5em;
+}
+div#buttons input {
+  float: left;
+  margin-top: 1em;
+}
+label {
+  float: left;
+  width: 10em;
+  text-align: right;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+}
+br {
+  clear: left;
+}
+span {
+  padding-bottom: 0.5em;
+  display: inline-block;
+}
